@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import axios from "axios";
 import Image from "next/image";
+import Link from "next/link";
 import {
   FaUtensils,
   FaLanguage,
@@ -114,8 +115,8 @@ export default function Profiles() {
                   </label>
                 </div>
                 <div className="ml-2 flex align-center justify-center">
-                  <label className="text-gray-700 text-sm font-bold">
-                    {repo.name}
+                  <label className="text-gray-700 text-sm font-bold hover:text-purple-700 ">
+                    <Link href={repo.html_url}>{repo.name}</Link>
                   </label>
                 </div>
               </div>
